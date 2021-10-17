@@ -1,0 +1,64 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.far {
+    margin-bottom: 150px;
+    font-size: 150px;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+
+input {
+    opacity: 0;
+    width: 0;
+    height: 0x;
+}
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider-round::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: .4s;
+}
+
+input:checked + .slider-round {
+    background-color: purple;
+}
+
+input:checked + .slider-round::before {
+    transform: translateX(26px);
+}
+
+.mystyle {
+    box-shadow: 10px 10px 100px 100px gold;
+    background-color: gold;
+}
+
